@@ -138,4 +138,22 @@ class Veggie
             }
             return true;
         }
+
+6) string[] users = new string[]{"martin","xhazzi","nathan"};
+
+        bool CheckUsernames(string[] usernames)
+        {
+            string pattern = @"[^a-z_0-9]";
+
+            foreach (string user in usernames)
+            {
+                if (user.Length > 20 || user.Length < 5 || Regex.IsMatch(user,pattern))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        System.Console.WriteLine(CheckUsernames(users));
 */
