@@ -269,6 +269,17 @@ class Veggie
         {
             System.Console.WriteLine(i);
         }
+
+14)  string GetDistinctLetters(string word1, string word2)
+        {
+            var x = word1.ToCharArray().ToList();
+            var y = word2.ToCharArray().ToList();
+            var z = x.Except(y).Concat(y.Except(x)).OrderBy(t => t).ToArray();
+        
+            return String.Join("", z);
+        }
+
+        System.Console.WriteLine(GetDistinctLetters("hello", "world"));
 */
 
 internal class Program
