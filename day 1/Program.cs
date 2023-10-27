@@ -7,10 +7,8 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-       
-    }
-}
 
+    }
 
 
 /* Completed
@@ -193,4 +191,34 @@ class Veggie
         }
 
         System.Console.WriteLine(GetYearsOfGrowth(1000, 2000, 2, 12));
+
+10)   Veggie[] veggies = { new Veggie("Parsnip", "root", 4), new Veggie("Broccoli", "brassica", 1), new Veggie("Carrot", "root", 5), new Veggie("Onion", "bulb", 3), new Veggie("Chard", "leaf", 3), new Veggie("Runner beans", "legume", 8) };
+
+        Veggie[] OrderVeg(Veggie[] veg)
+        {
+            return veg.ToList().OrderBy(x => x.quantity).ToArray();
+        }
+
+        var i = (OrderVeg(veggies));
+
+        foreach(var j in i)
+        {
+            System.Console.WriteLine($"{j.name}\t{j.type}\t{j.quantity}");
+        }
+    
+
+    class Veggie
+        {
+            public int quantity;
+            public string type;
+            public string name;
+
+            public Veggie(string n, string t, int q)
+            {
+                quantity = q;
+                type = t;
+                name = n;
+            }
+        }
+    }
 */
