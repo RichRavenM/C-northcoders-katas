@@ -7,7 +7,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-
+        
     }
 
 }
@@ -241,4 +241,25 @@ class Veggie
             cohort = c;
         }
     }
+
+12) int[] Range(int length, int start = 0, int step = 1)
+        {
+            int[] output = new int[length];
+            int startPoint = start;
+
+            for (int i = 0; i < length; i++)
+            {
+                output[i] = startPoint;
+                startPoint += step;
+            }
+
+            return output;
+        }
+
+        int[] result = Range(5, 2, 2);
+
+        foreach (int i in result)
+        {
+            System.Console.WriteLine(i);
+        }
 */
