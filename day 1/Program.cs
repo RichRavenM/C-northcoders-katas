@@ -7,7 +7,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        
+       
     }
 }
 
@@ -178,4 +178,19 @@ class Veggie
             return sum;
         }
         System.Console.WriteLine(SumAscii("John"));
+
+9)  double GetYearsOfGrowth(double start, double end, double percent, double migration)
+        {
+            double growthPercent = percent / 100 + 1;
+            int years = 0;
+
+            while(start < end)
+            {
+                start = (start * growthPercent) + migration;
+                years++;
+            }
+            return years;
+        }
+
+        System.Console.WriteLine(GetYearsOfGrowth(1000, 2000, 2, 12));
 */
