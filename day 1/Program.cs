@@ -1,11 +1,12 @@
-﻿using System;
+﻿using System.Text.RegularExpressions;
+using System;
 
 
 internal class Program
 {
     private static void Main(string[] args)
     {
-        
+       
     }
 }
 
@@ -88,4 +89,36 @@ class Veggie
         }
 
         System.Console.WriteLine(AlternateCase("hello world"));
+
+4)  System.Console.WriteLine(getCentury(1199));
+        
+        string getCentury(double year)
+        {
+            double century = Math.Floor(year / 100) + 1;
+            switch(century)
+            {
+                case 11:
+                return "11th";
+                case 12:
+                return "12th";
+                case 13:
+                return "13th";
+                default:
+                break;
+            }
+
+            double modTen = century % 10;
+
+            switch(modTen)
+            {
+                case 1:
+                return century + "st";
+                case 2:
+                return century + "nd";
+                case 3:
+                return century + "rd";
+                default:
+                return century + "th";
+            }
+        }
 */
