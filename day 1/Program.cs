@@ -1,16 +1,11 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Collections;
+using System.Text.RegularExpressions;
 using System;
 using System.Linq;
+using System.Collections.Generic;
 
 
-internal class Program
-{
-    private static void Main(string[] args)
-    {
-        
-    }
 
-}
 /* Completed
 1) int SumDigits(double number)
 {
@@ -262,4 +257,25 @@ class Veggie
         {
             System.Console.WriteLine(i);
         }
+
+13)  T[] RemoveDuplicates<T>(T[] input)
+        {
+            IEnumerable<T> x = input.ToList().Distinct();
+            return x.ToArray();
+        }
+
+        var result = RemoveDuplicates(new string[] { "1", "beans", "2", "beans", "4", "4" });
+        foreach (var i in result)
+        {
+            System.Console.WriteLine(i);
+        }
 */
+
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+       
+    }
+
+}
