@@ -6,7 +6,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-       
+        
     }
 }
 
@@ -120,5 +120,22 @@ class Veggie
                 default:
                 return century + "th";
             }
+        }
+
+5) int[] numbers = new int[] { 1, 3, 5, 6, 7, 8, 9 };
+
+        System.Console.WriteLine(AreOrdered(numbers));
+
+        bool AreOrdered(int[] input)
+        {
+            if (input.Length == 0)
+                return false;
+
+            for (int i = 1; i < input.Length; i++)
+            {
+                if (input[i] <= input[i - 1])
+                    return false;
+            }
+            return true;
         }
 */
