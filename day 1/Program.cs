@@ -10,7 +10,7 @@ internal class Program
 
     }
 
-
+}
 /* Completed
 1) int SumDigits(double number)
 {
@@ -219,6 +219,26 @@ class Veggie
                 type = t;
                 name = n;
             }
+        }
+    }
+
+11) Student[] coders = new Student[] { new Student("Ben", "October"), new Student("Amanda", "October"), new Student("Matt", "October") };
+
+        bool CheckStudents(Student[] students, string month)
+        {
+            return !students.Any(x => x.cohort != month);
+        }
+
+        System.Console.WriteLine(CheckStudents(coders, "October"));
+    public class Student
+    {
+        public string name;
+        public string cohort;
+
+        public Student(string n, string c)
+        {
+            name = n;
+            cohort = c;
         }
     }
 */
