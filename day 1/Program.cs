@@ -1,5 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 using System;
+using System.Linq;
 
 
 internal class Program
@@ -156,4 +157,13 @@ class Veggie
         }
 
         System.Console.WriteLine(CheckUsernames(users));
+
+7) int SumArgs(params int[] list)
+        {
+            int sum = 0;
+
+            return sum + list.ToList().Sum();
+        }
+
+        System.Console.WriteLine(SumArgs(1, 3, 4));
 */
