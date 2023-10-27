@@ -166,4 +166,16 @@ class Veggie
         }
 
         System.Console.WriteLine(SumArgs(1, 3, 4));
+
+8) int SumAscii(string input)
+        {
+            int sum = 0;
+            input = input.ToLower();
+            foreach (char i in input)
+            {
+                sum += i;
+            }
+            return sum;
+        }
+        System.Console.WriteLine(SumAscii("John"));
 */
