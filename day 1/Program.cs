@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Collections;
 using System.Text.RegularExpressions;
 using System;
 using System.Linq;
@@ -280,6 +281,36 @@ class Veggie
         }
 
         System.Console.WriteLine(GetDistinctLetters("hello", "world"));
+
+15)  Dictionary<char, int> GetFrequencies(string input)
+        {
+            Dictionary<char, int> letters = new Dictionary<char, int>();
+            string pattern = @"[a-zA-Z0-9]";
+            foreach (char i in input)
+            {
+
+                if (!Regex.IsMatch(i.ToString(), pattern))
+                {
+                    continue;
+                }
+                if (letters.ContainsKey(i))
+                {
+                    letters[i]++;
+                }
+                else
+                {
+                    letters.Add(i, 1);
+                }
+            }
+            return letters;
+        }
+
+        Dictionary<char, int> result = GetFrequencies("hello world");
+
+        foreach (KeyValuePair<char, int> i in result)
+        {
+            System.Console.WriteLine($"{i.Key} - {i.Value}");
+        }
 */
 
 internal class Program
