@@ -337,13 +337,63 @@ class Veggie
         {
             System.Console.WriteLine(i);
         }
+
+17) char GetMostRepeated(string input)
+        {
+            Dictionary<char, int> charObject = GetFrequencies(input);
+            int max = 0;
+            List<char> mostRepeated = new List<char>();
+
+            foreach (KeyValuePair<char, int> i in charObject)
+            {
+                if (i.Value > max)
+                {
+                    max = i.Value;
+                }
+            }
+
+            foreach (KeyValuePair<char, int> i in charObject)
+            {
+                if (i.Value == max)
+                {
+                    mostRepeated.Add(i.Key);
+                }
+            }
+
+            return mostRepeated.OrderBy(x => x).ToArray()[0];
+        }
+
+        Dictionary<char, int> GetFrequencies(string input)
+        {
+            Dictionary<char, int> letters = new Dictionary<char, int>();
+            string pattern = @"[a-zA-Z0-9]";
+            foreach (char i in input)
+            {
+
+                if (!Regex.IsMatch(i.ToString(), pattern))
+                {
+                    continue;
+                }
+                if (letters.ContainsKey(i))
+                {
+                    letters[i]++;
+                }
+                else
+                {
+                    letters.Add(i, 1);
+                }
+            }
+            return letters;
+        }
+
+        System.Console.WriteLine(GetMostRepeated(""));
 */
 
 internal class Program
 {
     private static void Main(string[] args)
     {
-       
+
     }
 
 }
